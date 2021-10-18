@@ -21,8 +21,6 @@ public class GameFunctions
     public static Random rand = new Random();
     public static List<LifeLines> lifeLines = new ArrayList<>();
     public static Scanner scan = new Scanner(System.in);
-    public static String walkAway = "";
-    private static int money = 0;
 
     public static boolean checkInputIsValid(Questions ques, AnswerEnum token, LifeLines life) {
         if (ques.getAnsTokens().contains(token)) {

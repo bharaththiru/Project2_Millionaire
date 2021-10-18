@@ -15,7 +15,6 @@ public class PlayerResponse
     
     private LifeLines lifeLine;
     private AnswerEnum answer;
-    private AnswerEnum Walk;
     private Questions question;
     public PlayerResponse(AnswerEnum token, LifeLines life)
     {
@@ -41,15 +40,6 @@ public class PlayerResponse
     public void setAnswer(AnswerEnum answerToken) 
     {
         this.answer = answerToken;
-    }
-    
-    public AnswerEnum getWalk() 
-    {
-        return Walk;
-    }
-
-    public void setWalk(AnswerEnum walkAway) {
-        this.Walk = walkAway;
     }
 
     public Questions getQuestion() 
