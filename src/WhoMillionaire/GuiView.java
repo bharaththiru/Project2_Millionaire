@@ -74,10 +74,11 @@ public class GuiView extends JFrame
     JLabel backFromGame = new JLabel("Back");
     JLabel backFromInst = new JLabel("Back");
     JLabel intro = new JLabel();
+    JLabel checkName = new JLabel("Enter Your Name.");
     private JLabel author = new JLabel("By: Bharath Thirunahari");
 
     private JTextArea instructionDesc = new JTextArea();
-    JTextField playerName = new JTextField("Enter Your Name.");
+    JTextField playerName = new JTextField("Enter Your Name.", 40);
     
     private String[] money = {"$100000", "$200000", "$300000", "$400000", "$500000", "$600000", "$700000", "$800000", "$900000", "$950000", "$1000000"};
     
@@ -167,6 +168,9 @@ public class GuiView extends JFrame
     
     public void enterNameScreen()
     {
+        checkName.setFont(new Font(intro.getFont().getName(), intro.getFont().getStyle(), 18));
+        checkName.setForeground(Color.white);
+        
         JPanel southPanel = new JPanel(new FlowLayout());
         southPanel.setBackground(Color.black);
         namePanel.add(southPanel, BorderLayout.SOUTH);
@@ -193,6 +197,7 @@ public class GuiView extends JFrame
         namePanelGbc.gridheight = 10;
         namePanelGbc.insets = new Insets(30,30,30,30);
         playerName.setFont(new Font(playerName.getFont().getName(), Font.BOLD, 18));
+        playerName.setSize(50, playerName.getHeight());
         centerPanel.add(playerName, namePanelGbc);
         
         //gbc for continue button
@@ -202,6 +207,15 @@ public class GuiView extends JFrame
         namePanelGbc.insets = new Insets(30,30,30,30);
         nameContinue.setFont(new Font(nameContinue.getFont().getName(), nameContinue.getFont().getStyle(), 18));
         centerPanel.add(nameContinue, namePanelGbc);
+        
+        //gbc for CheckName 
+        namePanelGbc.gridx = centerPanel.getWidth()/2;
+        namePanelGbc.gridy = 90;
+        namePanelGbc.gridheight = 10;
+        namePanelGbc.insets = new Insets(30,30,30,30);
+        nameContinue.setFont(new Font(nameContinue.getFont().getName(), nameContinue.getFont().getStyle(), 18));
+        centerPanel.add(checkName, namePanelGbc);
+        
         
         namePanel.setBackground(Color.black);
         namePanel.setVisible(true);

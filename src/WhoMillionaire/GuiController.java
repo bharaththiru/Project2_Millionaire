@@ -190,13 +190,25 @@ public class GuiController implements ActionListener, MouseListener
         
         if(e.getSource() == view.nameContinue)
         {
-            Player.setName(view.playerName.getText());
-            System.out.println("Player Name: "+Player.getName());
-            view.startGame();
-            score = 0;
-            i = 0;
-            view.resetMoney();
-            view.repaint();
+            if(view.playerName.getText().equalsIgnoreCase(""))
+            {
+                view.checkName.setText("Name Field Cannot Be Left Blank.");
+            }
+            else if( view.playerName.getText().equalsIgnoreCase("Enter Your Name."))
+            {
+                view.checkName.setText("Please Enter Your Name..");
+            }
+            else
+            {
+                Player.setName(view.playerName.getText());
+                System.out.println("Player Name: " + Player.getName());
+                view.startGame();
+                score = 0;
+                i = 0;
+                view.resetMoney();
+                view.repaint();
+            }
+            
         }
 
     }
@@ -316,12 +328,15 @@ public class GuiController implements ActionListener, MouseListener
         if(e.getComponent().equals(view.backFromGame))
         {
             view.MainMenu();
-            //view.repaint();
+            view.checkName.setText("Enter Your Name.");
+            view.playerName.setText("Enter Your Name.");
         }
         
         if(e.getComponent().equals(view.backFromInst))
         {
             view.MainMenu();
+            view.checkName.setText("Enter Your Name.");
+            view.playerName.setText("Enter Your Name.");
         }
     }
 
