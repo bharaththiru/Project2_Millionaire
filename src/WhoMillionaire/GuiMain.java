@@ -17,6 +17,6 @@ public class GuiMain
         GuiModel model = new GuiModel();
         GuiController controller = new GuiController(view, model);
         
-        model.viewPlayerTable(); //If you wish to view the PLAYER table in the database.
+        //model.viewPlayerTable(); //If you wish to view the PLAYER table in the database.
     }
 }

@@ -49,11 +49,7 @@ public class GuiController implements ActionListener, MouseListener
                 view.questions.remove(view.randomIndex);
                 view.updateScreenIfCorrect();
                 
-                if (score == 1100000) 
-                {
-                    score = 1000000;
-                }
-                else
+                if(score < 1000000)
                 {
                     score += 100000;
                 }
@@ -91,11 +87,7 @@ public class GuiController implements ActionListener, MouseListener
                 view.lifeUsed.setText("Correct!");
                 view.questions.remove(view.randomIndex);
                 view.updateScreenIfCorrect();
-                if (score == 1100000) 
-                {
-                    score = 1000000;
-                }
-                else
+                if(score < 1000000)
                 {
                     score += 100000;
                 }
@@ -131,11 +123,7 @@ public class GuiController implements ActionListener, MouseListener
                 view.lifeUsed.setText("Correct!");
                 view.questions.remove(view.randomIndex);
                 view.updateScreenIfCorrect();
-                if (score == 1100000) 
-                {
-                    score = 1000000;
-                }
-                else
+                if(score < 1000000)
                 {
                     score += 100000;
                 }
@@ -171,11 +159,7 @@ public class GuiController implements ActionListener, MouseListener
                 view.lifeUsed.setText("Correct!");
                 view.questions.remove(view.randomIndex);
                 view.updateScreenIfCorrect();
-                if (score == 1100000) 
-                {
-                    score = 1000000;
-                }
-                else
+                if(score < 1000000)
                 {
                     score += 100000;
                 }
